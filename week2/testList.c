@@ -19,11 +19,11 @@ int main (int argc, const char * argv[]) {
   printf("%dth node from the back is ", 2);
   printLink(nodeFromEnd(i,2));
 
-  link j = reverse(i);
-  printf("Reversed:\nList j: ");
+  link j = createListFromStr("1014101");
   printList(j);
+  printf("should be a palindrome: %d", isPalindrome(j));
   
   freeList(i);
-  freeList(ij);
+  freeList(j);
   return EXIT_SUCCESS;;
 }

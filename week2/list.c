@@ -11,7 +11,7 @@ link nodeFromEnd(link l, int k){
 
 // ---------------------------------------
 // QUESTION 2
-link reverse(link l){
+int isPalindrome(link l){
 	// TODO your implementation here
 }
 // ---------------------------------------
@@ -61,11 +61,11 @@ link fromTo (int start, int end) {
 	return list;
 }
 
-link newNode(Item it)
-	link newNode = malloc(sizeof(node));
-	newNode->next = NULL;
-	newNode->item = it;
-	return newNode;
+link newNode(Item it){
+	link new = malloc(sizeof(node));
+	new->next = NULL;
+	new->item = it;
+	return new;
 }
 
 void printLink(link l){
@@ -78,6 +78,13 @@ link createListFromStr(char *string){
 	link end = NULL;
 	
 	for(int i=0; string[i]!='\0'; i++) {
-		link new = newNode()
+		link new = newNode(string[i]-'0');
+		if(!list){
+			list = end = new;
+			continue;
+		}
+		end->next = new;
+		end = new;
 	}
+	return list;
 }

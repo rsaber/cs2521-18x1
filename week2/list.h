@@ -33,6 +33,9 @@ void printLink(link l);
 // create a new node
 link newNode(Item it);
 
+// create list from a string of numbers
+link createListFromStr(char *);
+
 
 
 
@@ -41,4 +44,4 @@ link newNode(Item it);
 link nodeFromEnd(link l, int k);
 
 // q2
-link reverse(link l);
+int isPalindrome(link l);
