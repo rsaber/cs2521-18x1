@@ -46,7 +46,7 @@ Node filter(Node l, int (*predicate)(int)){
     Folding an empty list yeilds the starting value.
 */
 int fold (Node l, int (*fn) (int, int), int start){
-    if(!l) return 0;
+    if(!l) return start;
     return fn(l->value, fold(l->next, fn, start));
 }
 
