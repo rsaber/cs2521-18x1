@@ -36,6 +36,10 @@ int sumListItems (link ls) {
     return sum;
 }
 
+int sumListItems(link ls){
+	return !ls ? 0 : ls->item + sumListItems(ls->next);
+}
+
 void freeList(link list){
 	link curr = list;
 	link next;   
